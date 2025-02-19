@@ -6,7 +6,7 @@
 </head>
 <body>
     <div id="home" class="page">
-        <button id="homeYoutubeBtn" class="item">
+        <button id="homeYoutubeBtn" class="item" onclick="changePage('youtube')">
             <img src="./images/youtubeLogo.png" alt="YouTube"/>
             <h1>YouTube</h1>
         </button>
@@ -23,6 +23,7 @@
     </div>
 
     <div id="youtube" class="page" style="display:none">
+        <button id="ytHomeBtn" onclick="changePage('home')">Home</button>
         <h1>YouTube Page</h1>
     </div>
 

@@ -1,4 +1,5 @@
 import homePage from "./home.js";
+import youtubePage from "./youtube.js";
 
 const pages = document.querySelectorAll(".page");
 
@@ -8,4 +9,11 @@ window.changePage = (page)=>{
     }
 
     document.getElementById(page).style.display = "flex";
+
+    switch(page){
+        case "home": homePage(); break;
+        case "youtube": youtubePage(); break;
+    }
 }
+
+homePage();
