@@ -2,62 +2,26 @@
 <html lang="en">
 <head>
     <title>TV Menu</title>
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box;}
-
-        body{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            padding: 35px;
-            min-height: 100vh;
-            background: black;
-        }
-
-        .item{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            height: 250px;
-            width: 250px;
-            border-radius: 35px;
-            color: black;
-            text-decoration: none;
-            background: rgb(50, 50, 50);
-            color: rgb(225, 225, 225);
-            border: 1px solid rgb(50, 50, 50);
-        }
-
-        .item:hover{
-            background: rgb(75, 75, 75);
-        }
-
-        .item img{
-            width: 50%;
-            border-radius: 35px;
-        }
-
-        .item h1{
-            font-size: 45px;
-        }
-    </style>
+    <link rel="stylesheet" href="./bundle/index.css">
 </head>
 <body>
-    <a class="item" href="https://youtube.com">
-        <img src="./youtubeLogo.png" alt="YouTube"/>
-        <h1>YouTube</h1>
-    </a>
+    <div id="home" class="page">
+        <a class="item" href="https://youtube.com">
+            <img src="./images/youtubeLogo.png" alt="YouTube"/>
+            <h1>YouTube</h1>
+        </a>
 
-    <a class="item" href="https://streamm4u.org">
-        <img src="./movie.png" alt="Movies">
-        <h1>Movies</h1>
-    </a>
+        <a class="item" href="https://streamm4u.org">
+            <img src="./images/movie.png" alt="Movies">
+            <h1>Movies</h1>
+        </a>
 
-    <a class="item" href="https://www.youtube.com/watch?v=iaQBQp5tgcw">
-        <img src="./fireplace.webp" alt="Fireplace">
-        <h1>Fireplace</h1>
-    </a>
+        <a class="item" href="https://www.youtube.com/watch?v=iaQBQp5tgcw">
+            <img src="./images/fireplace.webp" alt="Fireplace">
+            <h1>Fireplace</h1>
+        </a>
+    </div>
+
+    <script src="./bundle/index.js"></script>
 </body>
 </html>
