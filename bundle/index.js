@@ -50,8 +50,44 @@
   };
 
   // js/youtube.js
-  var youtube_default = () => {
-    console.log("yt");
+  var Youtube = class {
+    constructor() {
+      console.log("yt page");
+      this.navigator();
+    }
+    navigator() {
+      document.addEventListener("keydown", (event) => {
+        switch (event.key) {
+          case "h":
+            window.changePage("home");
+            break;
+        }
+      });
+    }
+  };
+
+  // js/fireplace.js
+  var Fireplace = class {
+    constructor() {
+      this.container = document.getElementById("fireplace");
+      this.navigator();
+      this.addVideo();
+    }
+    navigator() {
+      document.addEventListener("keydown", (event) => {
+        switch (event.key) {
+          case "h":
+            window.changePage("home");
+            break;
+        }
+      });
+    }
+    addVideo() {
+      const iframe = document.createElement("iframe");
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.src = "https://www.youtube.com/embed/iaQBQp5tgcw?si=hrsCYgWa1Td5zebh&autoplay=1";
+      this.container.appendChild(iframe);
+    }
   };
 
   // js/index.js
@@ -66,7 +102,10 @@
         new Home();
         break;
       case "youtube":
-        youtube_default();
+        new Youtube();
+        break;
+      case "fireplace":
+        new Fireplace();
         break;
     }
   };

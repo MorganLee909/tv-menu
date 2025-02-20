@@ -1,5 +1,6 @@
 import Home from "./home.js";
-import youtubePage from "./youtube.js";
+import Youtube from "./youtube.js";
+import Fireplace from "./fireplace.js";
 
 const pages = document.querySelectorAll(".page");
 
@@ -12,7 +13,8 @@ window.changePage = (page)=>{
 
     switch(page){
         case "home": new Home(); break;
-        case "youtube": youtubePage(); break;
+        case "youtube": new Youtube(); break;
+        case "fireplace": new Fireplace(); break;
     }
 }
 
