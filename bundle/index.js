@@ -77,6 +77,7 @@
       document.addEventListener("keydown", (event) => {
         switch (event.key) {
           case "h":
+            this.removeIframe();
             window.changePage("home");
             break;
         }
@@ -87,6 +88,9 @@
       iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
       iframe.src = "https://www.youtube.com/embed/iaQBQp5tgcw?si=hrsCYgWa1Td5zebh&autoplay=1";
       this.container.appendChild(iframe);
+    }
+    removeIframe() {
+      this.container.removeChild(this.container.children[0]);
     }
   };
 
