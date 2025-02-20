@@ -6,20 +6,30 @@
 </head>
 <body>
     <div id="home" class="page">
-        <button id="homeYoutubeBtn" class="item" onclick="changePage('youtube')">
-            <img src="./images/youtubeLogo.png" alt="YouTube"/>
-            <h1>YouTube</h1>
-        </button>
-
-        <a class="item" href="https://streamm4u.org">
-            <img src="./images/movie.png" alt="Movies">
-            <h1>Movies</h1>
-        </a>
-
-        <a class="item" href="https://www.youtube.com/watch?v=iaQBQp5tgcw">
-            <img src="./images/fireplace.webp" alt="Fireplace">
-            <h1>Fireplace</h1>
-        </a>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <button id="homeYoutubeBtn" class="item active" onclick="changePage('youtube')">
+                            <img src="./images/youtubeLogo.png" alt="YouTube"/>
+                            <h1>YouTube</h1>
+                        </button>
+                    </td>
+                    <td>
+                        <button id="moviesBtn" class="item">
+                            <img src="./images/movie.png" alt="Movies">
+                            <h1>Movies</h1>
+                        </button>
+                    </td>
+                    <td>
+                        <button id="fireplaceBtn" class="item">
+                            <img src="./images/fireplace.webp" alt="Fireplace">
+                            <h1>Fireplace</h1>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <div id="youtube" class="page" style="display:none">
